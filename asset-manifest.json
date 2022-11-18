@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ys-cart/static/css/main.04bc6a3a.chunk.css",
-    "main.js": "/ys-cart/static/js/main.ef3ea180.chunk.js",
-    "main.js.map": "/ys-cart/static/js/main.ef3ea180.chunk.js.map",
+    "main.css": "/ys-cart/static/css/main.5ae9b814.chunk.css",
+    "main.js": "/ys-cart/static/js/main.692babb4.chunk.js",
+    "main.js.map": "/ys-cart/static/js/main.692babb4.chunk.js.map",
     "runtime-main.js": "/ys-cart/static/js/runtime-main.571ed1fd.js",
     "runtime-main.js.map": "/ys-cart/static/js/runtime-main.571ed1fd.js.map",
     "static/js/2.bc26aad9.chunk.js": "/ys-cart/static/js/2.bc26aad9.chunk.js",
     "static/js/2.bc26aad9.chunk.js.map": "/ys-cart/static/js/2.bc26aad9.chunk.js.map",
     "index.html": "/ys-cart/index.html",
-    "static/css/main.04bc6a3a.chunk.css.map": "/ys-cart/static/css/main.04bc6a3a.chunk.css.map",
+    "static/css/main.5ae9b814.chunk.css.map": "/ys-cart/static/css/main.5ae9b814.chunk.css.map",
     "static/js/2.bc26aad9.chunk.js.LICENSE.txt": "/ys-cart/static/js/2.bc26aad9.chunk.js.LICENSE.txt",
     "static/media/close.4f9c10a9.svg": "/ys-cart/static/media/close.4f9c10a9.svg",
     "static/media/minus.a80d09d9.svg": "/ys-cart/static/media/minus.a80d09d9.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.571ed1fd.js",
     "static/js/2.bc26aad9.chunk.js",
-    "static/css/main.04bc6a3a.chunk.css",
-    "static/js/main.ef3ea180.chunk.js"
+    "static/css/main.5ae9b814.chunk.css",
+    "static/js/main.692babb4.chunk.js"
   ]
 }
