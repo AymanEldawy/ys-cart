@@ -4,6 +4,7 @@ import { FooterBio } from "./FooterBio";
 import { FooterLinks } from "./FooterLinks";
 import { Newsletter } from "./Newsletter";
 import { SocialMediaLinks } from "./SocialMediaLinks";
+import { Copyright } from "./Copyright";
 // Styles
 import "../styles/footer.scss";
 
@@ -21,6 +22,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+        <Copyright />
       </div>
     </footer>
   );
