@@ -1,0 +1,120 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 480px;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  box-shadow: -1.78px -1.78px 4px #00000040;
+  padding: 1.5rem 1rem;
+  right: -100%;
+  transition: right 0.3s ease-in-out;
+  &.show-cart {
+    right: 0;
+  }
+  .cart-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    img {
+      max-width: 15px;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  .cart-content {
+    overflow-y: auto;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  .cart-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    button {
+      flex: 1;
+      border-radius: 1.5rem;
+      padding: 0.75rem;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      &:first-child {
+        background-color: var(--primary-color);
+      }
+      &:last-child {
+        background-color: var(--secondary-color);
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Cart item
+.cart-item {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.75px solid #ececec;
+  border-radius: 0.25rem;
+  display: flex;
+  gap: 1rem;
+  figure {
+    width: 100px;
+    img {
+      background: #000;
+      border: 0.75px solid #ececec;
+      max-width: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+  .cart-item-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    > span {
+      font-size: 14px;
+    }
+    .cart-item-info {
+      display: flex;
+      justify-content: space-between;
+      h4 {
+        color: var(--secondary-color);
+      }
+      .remove-item {
+        border-radius: 1rem;
+        padding: 0.45rem 0.75rem;
+        border: none;
+        background: var(--primary-color);
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+// Cart Total 
+.cart-total {
+  color: #1D1D1B;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
