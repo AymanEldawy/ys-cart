@@ -14,6 +14,7 @@ class App extends Component {
       products: [],
       selectedProduct: {},
       total: 0,
+      activeImage: null,
     };
   }
   componentDidMount() {
@@ -22,6 +23,7 @@ class App extends Component {
         {
           products: data, // set products
           selectedProduct: data[0], // selected first product
+          activeImage: data[0].images?.at(0), // selected first product
         },
         () => {
           this.getItemPrices();
@@ -37,6 +39,7 @@ class App extends Component {
     if (newSelectedProduct) {
       this.setState({
         selectedProduct: newSelectedProduct,
+        activeImage: newSelectedProduct?.images?.at(0),
       });
     }
   };
@@ -107,36 +110,36 @@ class App extends Component {
     });
   };
 
-    // Gallery list change active img
-    changeImageInGallery = (index) => {
-      this.setState({
-        activeImage: this.state.selectedProduct?.images?.at(index),
-      });
-    };
-  
-    // Gallery list control to go next
-    nextImgInGallery = (imgIndex) => {
-      let index = this.state.selectedProduct.images.indexOf(imgIndex);
-      let len = this.state.selectedProduct.images.length - 1;
-  
-      if (index < len) index += 1;
-      else index = 0;
-  
-      this.setState({
-        activeImage: this.state.selectedProduct?.images?.at(index),
-      });
-    };
-    // Gallery list control to go back
-    prevImgInGallery = (imgIndex) => {
-      let index = this.state.selectedProduct.images.indexOf(imgIndex);
-      let len = this.state.selectedProduct.images.length - 1;
-      if (index > 0) index -= 1;
-      else index = len;
-      this.setState({
-        activeImage: this.state.selectedProduct?.images?.at(index),
-      });
-    };
-  
+  // Gallery list change active img
+  changeImageInGallery = (index) => {
+    this.setState({
+      activeImage: this.state.selectedProduct?.images?.at(index),
+    });
+  };
+
+  // Gallery list control to go next
+  nextImgInGallery = (imgIndex) => {
+    let index = this.state.selectedProduct.images.indexOf(imgIndex);
+    let len = this.state.selectedProduct.images.length - 1;
+
+    if (index < len) index += 1;
+    else index = 0;
+
+    this.setState({
+      activeImage: this.state.selectedProduct?.images?.at(index),
+    });
+  };
+  // Gallery list control to go back
+  prevImgInGallery = (imgIndex) => {
+    let index = this.state.selectedProduct.images.indexOf(imgIndex);
+    let len = this.state.selectedProduct.images.length - 1;
+    if (index > 0) index -= 1;
+    else index = len;
+    this.setState({
+      activeImage: this.state.selectedProduct?.images?.at(index),
+    });
+  };
+
   render() {
     return (
       <Layout
@@ -152,6 +155,10 @@ class App extends Component {
           selectedProduct={this.state.selectedProduct}
           addToCart={this.addToCart}
           changeSelectedProduct={this.changeSelectedProduct}
+          activeImage={this.state.activeImage}
+          nextImgInGallery={this.nextImgInGallery}
+          prevImgInGallery={this.prevImgInGallery}
+          changeImageInGallery={this.changeImageInGallery}
         />
       </Layout>
     );

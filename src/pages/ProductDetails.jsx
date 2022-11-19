@@ -17,11 +17,6 @@ class ProductDetails extends Component {
       quantity: 1,
     };
   }
-  componentDidMount() {
-    this.setState({
-      activeImage: this.props.selectedProduct?.images?.at(0),
-    });
-  }
 
   // Increment quantity
   increment = () => {
@@ -37,42 +32,12 @@ class ProductDetails extends Component {
       quantity: +this.state.quantity - 1,
     });
   };
-  // Gallery list change active img
-  changeImageInGallery = (index) => {
-    this.setState({
-      activeImage: this.props.selectedProduct?.images?.at(index),
-    });
-  };
 
   addItemToCart = () => {
     this.props.addToCart({
       id: uuid(),
       productId: this.props.selectedProduct.id,
       quantity: this.state.quantity,
-    });
-  };
-
-  // Gallery list control to go next
-  nextImgInGallery = (imgIndex) => {
-    let index = this.props.selectedProduct.images.indexOf(imgIndex);
-    let len = this.props.selectedProduct.images.length - 1;
-
-    if (index < len) index += 1;
-    else index = 0;
-
-    this.setState({
-      activeImage: this.props.selectedProduct?.images?.at(index),
-    });
-  };
-  // Gallery list control to go back
-  prevImgInGallery = (imgIndex) => {
-    let index = this.props.selectedProduct.images.indexOf(imgIndex);
-    let len = this.props.selectedProduct.images.length - 1;
-    if (index > 0) index -= 1;
-    else index = len;
-
-    this.setState({
-      activeImage: this.props.selectedProduct?.images?.at(index),
     });
   };
 
@@ -84,10 +49,10 @@ class ProductDetails extends Component {
           <div className="product">
             <ProductGallery
               product={this.props.selectedProduct}
-              activeImage={this.state.activeImage}
-              changeImageInGallery={this.changeImageInGallery}
-              nextImgInGallery={this.nextImgInGallery}
-              prevImgInGallery={this.prevImgInGallery}
+              activeImage={this.props.activeImage}
+              changeImageInGallery={this.props.changeImageInGallery}
+              nextImgInGallery={this.props.nextImgInGallery}
+              prevImgInGallery={this.props.prevImgInGallery}
             />
             <ProductInfo
               quantity={this.state.quantity}
