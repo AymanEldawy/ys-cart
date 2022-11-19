@@ -15,6 +15,7 @@ const Layout = ({
   closeCart,
   cart,
   removeFromCart,
+  total,
 }) => {
   return (
     <>
@@ -24,6 +25,7 @@ const Layout = ({
       <CategoriesList />
       {children}
       <Cart
+        total={total}
         cart={cart}
         closeCart={closeCart}
         isCartOpen={isCartOpen}

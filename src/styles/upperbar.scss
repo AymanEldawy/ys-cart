@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: space-between;
     height: 48px;
+    @media (max-width: 991px) {
+      align-items: flex-end;
+      height: 75px;
+      padding-bottom: 0.5rem;
+    }
   }
   .upperbar-brand {
     display: flex;
@@ -14,6 +19,16 @@
     .upperbar-menu-icon {
       background: none;
       border: none;
+      img {
+        @media (max-width: 767px) {
+          max-width: 20px;
+        }
+      }
+    }
+    img {
+      @media (max-width: 767px) {
+        max-width: 80px;
+      }
     }
   }
 
@@ -21,6 +36,13 @@
     font-size: 14px;
     display: flex;
     gap: 0.5rem;
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: pre;
+    }
     .dummy-link {
       font-weight: bold;
       color: #000;
@@ -36,15 +58,23 @@
     list-style: none;
     gap: 1rem;
     font-size: 14px;
+    @media (max-width: 767px) {
+      gap: .5rem;
+    }
     .upperbar-menu-item {
       color: #000;
       font-weight: 600;
+      @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+      }
       img {
         max-width: 14px;
         object-fit: cover;
         margin-right: 3px;
       }
       .upperbar-menu-link {
+        white-space: nowrap;
         color: #000;
         text-decoration: none;
       }

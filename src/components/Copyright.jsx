@@ -5,7 +5,7 @@ export const Copyright = () => {
     <div className="copyright">
       <p>© 2021 yeshtery, all rights reserved.</p>
       <div className="payment-status">
-        <img src="images/cache.png" alt="Cache on delivery" />
+        <img src="images/cash.png" alt="cash on delivery" />
         <img src="images/visa.png" alt="Visa" />
         <img src="images/master-card.png" alt="Master card" />
       </div>

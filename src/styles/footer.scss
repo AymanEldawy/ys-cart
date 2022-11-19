@@ -7,17 +7,21 @@ footer {
     align-items: flex-start;
     gap: 2rem;
     padding: 1.5rem 0 1rem;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
     .useful-links {
       flex-grow: 1;
       flex-shrink: 0;
 
-      form {
+      .news-letter {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-radius: 2rem;
         background: #fff;
         padding: 0.25rem 0.25rem 0.25rem 1rem;
+        max-width: 450px;
 
         input[type="email"] {
           border: none;
@@ -41,6 +45,7 @@ footer {
       .footer-links {
         margin-top: 2rem;
         display: flex;
+
         a {
           display: flex;
           align-items: center;
@@ -55,7 +60,8 @@ footer {
           border-right: 1px solid #ccc2;
           padding-right: 1rem;
           margin-right: 1rem;
-          width: 300px;
+          max-width: 300px;
+          flex: 1;
         }
         .social-media {
           display: flex;
@@ -72,6 +78,12 @@ footer {
       border-right: 1px solid #ccc2;
       padding-right: 1rem;
       max-width: 450px;
+      min-width: 260px;
+      @media (max-width: 767px) {
+        max-width: unset;
+        border: none;
+        width: 100%;
+      }
       img {
         margin-bottom: 1rem;
         max-width: 180px;
@@ -90,8 +102,22 @@ footer {
     align-items: center;
     border-top: 1px solid #ccc2;
     padding-top: 1rem;
+    font-size: 14px;
+    padding-bottom: 1rem;
+    @media (max-width: 767px) {
+      gap: 1rem;
+      justify-content: center;
+    }
   }
   .payment-status {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    img {
+      max-height: 25px;
+    }
+  }
+  .power-by {
     display: flex;
     gap: 0.5rem;
   }

@@ -11,6 +11,10 @@
   padding: 1.5rem 1rem;
   right: -100%;
   transition: right 0.3s ease-in-out;
+  @media (max-width: 767px) {
+   max-width: unset;
+   width: 100%;
+  }
   &.show-cart {
     right: 0;
   }
