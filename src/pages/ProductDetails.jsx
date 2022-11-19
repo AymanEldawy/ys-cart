@@ -15,7 +15,6 @@ class ProductDetails extends Component {
     super(props);
     this.state = {
       quantity: 1,
-      activeImage: null,
     };
   }
   componentDidMount() {

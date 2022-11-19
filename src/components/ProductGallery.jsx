@@ -10,7 +10,6 @@ export const ProductGallery = ({
   nextImgInGallery,
   prevImgInGallery,
 }) => {
-  const productGallery = images || [];
   return (
     <div className="product-gallery">
       <figure>
@@ -21,7 +20,7 @@ export const ProductGallery = ({
       </figure>
       <div className="gallery">
         <div className="gallery-list">
-          {productGallery.map((src, index) => (
+          {images && images.map((src, index) => (
             <img
               src={src}
               alt="product images "
